@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block titulo%}Login{% endblock %}
+
+{% block contenido %}
+<div class="row">
+    <form class="col s8 offset-s2" method="POST" action="">
+        {% csrf_token %}
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.username }}
+                <label for="{{ form.nombre.id_for_label }}">Usuario</label>
+                {{ form.username.errors }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.password }}
+                <label for="{{ form.password.id_for_label }}">Password</label>
+                {{ form.password.errors }}
+            </div>
+        </div>
+        <div class="center-align">
+            <button class="blue darken-2 btn waves-effect waves-light" type="submit" name="action">Login</button>
+            &nbsp;&nbsp;o&nbsp;&nbsp;
+            <a href="">Registrate</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

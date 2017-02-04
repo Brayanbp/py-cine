@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block titulo%}Inicio{% endblock %}
+
+{% block contenido %}
+<h2 class="title">Películas</h2>
+<div class="containerListadoPeli row">
+    {% for pelicula in peliculas %}
+		<div class="col s3">
+            <div class="imagenListado">
+                <div class="imagenPelicula">
+                    <img src="{{ pelicula.imagen.url }}">
+                </div>
+            </div>
+            <div class="nombreListado">
+                <a class="item-pelicula-ec" href="{% url 'pelicula' pk=pelicula.id %}">{{ pelicula.nombre }}</a>
+            </div>
+        </div>
+	{% endfor %}
+</div>
+{% endblock %}

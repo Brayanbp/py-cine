@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block titulo%}{{ pelicula.nombre }}{% endblock %}
+
+{% block contenido %}
+<h2 class="title">Detalle de Película</h2>
+<div class="row ctn-pelicula">
+    <div class="col s3 pelicula-img">
+        <img src="{{ pelicula.imagen.url }}">
+        <a target="_blank" href="{{ pelicula.trailer }}" class="lnk-trailer">Mira el trailer</a>
+    </div>
+    <div class="col s9 pelicula-detalle">
+        <h3>{{ pelicula.nombre }}</h3>
+        <dl class="pelicula-dicc">
+            <dt>Género:</dt>
+            <dd>{{ pelicula.genero.nombre }}</dd>
+            <dt>Duración:</dt>
+            <dd>{{ pelicula.duracion }}</dd>
+            <dt>Director:</dt>
+            <dd>{{ pelicula.director }}</dd>
+            <dt>País:</dt>
+            <dd>{{ pelicula.pais.nombre }}</dd>
+            <dt>Actores:</dt>
+            <dd>{{ pelicula.actores }}</dd>
+            <dt>Sinopsis:</dt>
+            <dd>{{ pelicula.sinopsis }}</dd>
+        </dl>
+    </div>
+</div>
+{% endblock %}

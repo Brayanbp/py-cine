@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block titulo%}Cines{% endblock %}
+
+{% block contenido %}
+<h2 class="title">Cines</h2>
+
+<div class="row ctn-cine">
+    {% for cine in object_list %}
+    <div class="col s4">
+        <img src="{{ cine.imagen.url }}">
+        <div class="cine-desc">
+            <h3>{{ cine.nombre }}</h3>
+            <p>{{ cine.direccion }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

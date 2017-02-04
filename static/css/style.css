@@ -1,0 +1,32 @@
+.header .brand-logo{top: 7px}
+.header .brand-logo img{display: block}
+.header .menu a{color: #002d62}
+.header .menu a:hover{color: #fff71c;background-color: #236bb3}
+.header .button-collapse{color: #236bb3}
+
+.title{color:#0066b1;font:bold 25px/28px Verdana,Geneva,sans-serif;margin-bottom:40px}
+.containerListadoPeli{*zoom: 1}
+.containerListadoPeli:before,.containerListadoPeli:after{display: table;content: "";line-height:0}
+.containerListadoPeli:after{clear: both}
+.containerListadoPeli .s3:nth-child(n+5){margin-top: 20px}
+.containerListadoPeli .imagenListado{width:184px}
+.containerListadoPeli .imagenListado img{display: block}
+.containerListadoPeli .nombreListado{width: 184px;background: #1d8cda;text-align: center}
+.containerListadoPeli .nombreListado a{color:#FFF;font:bold 13px/15px Arial;display:block;height: 47px;line-height: 47px}
+
+.pelicula-img{text-align: center}
+.pelicula-img a{color:#428bca}
+.pelicula-detalle h3{font:bold 18px/21px Arial;color:#004b8c;margin:0;background: #f0f0f0;padding:15px}
+.pelicula-detalle .pelicula-dicc{font-size: 13px;font-family: Arial}
+.pelicula-detalle .pelicula-dicc dt{float: left;font-weight: bold;color:#004b8c}
+.pelicula-detalle .pelicula-dicc dd{margin-left: 80px;color:#585858;margin-bottom: 6px;text-align: justify}
+
+.ctn-cine .s4:nth-child(n+4){margin-top: 20px}
+.ctn-cine img{display: block;width: 100%}
+.ctn-cine .cine-desc{background: #e0e0e0;padding: 12px;height: 89px}
+.ctn-cine .cine-desc h3{margin:0;color:#005ca9;font:bold 13px/16px Arial}
+.ctn-cine .cine-desc p{margin:0; font: 12px/15px Arial;color:#585858;margin-top: 4px}
+
+@media (max-width: 600px) {
+    .header .brand-logo{top: 3px}
+}
