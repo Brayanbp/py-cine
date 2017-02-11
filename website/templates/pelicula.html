@@ -27,4 +27,28 @@
         </dl>
     </div>
 </div>
+<div class="ctn-cartelera">
+    <div class="cartelera-selector">
+        <p>¿En qué cine puedas verla?</p>
+        <div class="cartelera-slct">
+            <select data-id="{{ pelicula.id }}" class="browser-default" id="slc-cine">
+                <option value="">Seleccione el cine</option>
+                {% for cine in cines %}
+                <option value="{{ cine.id }}">{{ cine.nombre }}</option>
+                {% endfor %}
+            </select>
+            <select class="browser-default" id="slc-dia">
+                <option value="">Seleccione el día</option>
+            </select>
+        </div>
+    </div>
+    <div class="cartelera-horarios">
+        <div class="row">
+            <div class="col s3">
+                <p id="txt-horario">Seleccione el cine y el día</p>
+            </div>
+            <div id="ctn-horario" class="col s9"></div>
+        </div>
+    </div>
+</div>
 {% endblock %}

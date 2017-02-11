@@ -14,12 +14,17 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         contexto = super(Home, self).get_context_data(**kwargs)
-        contexto['peliculas'] = Pelicula.objects.all().order_by('-id')
+        contexto['peliculas'] = Pelicula.objects.all().order_by('id')
         return contexto
 
 class DetallePelicula(DetailView):
     template_name = 'pelicula.html'
     model = Pelicula
+
+    def get_context_data(self, **kwargs):
+        contexto = super(DetallePelicula, self).get_context_data(**kwargs)
+        contexto['cines'] = Cine.objects.all().order_by('nombre')
+        return contexto
 
 class ListadoCine(ListView):
     template_name = 'cine.html'

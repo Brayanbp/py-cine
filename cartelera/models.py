@@ -20,7 +20,8 @@ class Cartelera(models.Model):
 
     pelicula = models.ForeignKey(Pelicula)
     cine = models.ForeignKey(Cine)
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
+    hora = models.TimeField()
 
     def __str__(self):
         return self.pelicula.nombre

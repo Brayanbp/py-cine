@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cartelera',
     'pelicula',
     'website',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -79,12 +80,8 @@ WSGI_APPLICATION = 'cine.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'NAME': 'py_cine',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'PORT': 3306
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
